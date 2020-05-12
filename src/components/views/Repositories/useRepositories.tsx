@@ -4,7 +4,7 @@ import getEnvVar from '../../../utils/getEnvVar';
 
 const GITHUB_GRAPHQL_URI = 'https://api.github.com/graphql';
 
-type RepositoryResult = {
+export type RepositoryResult = {
   id: string;
   name: string;
   watchers: { totalCount: number };

@@ -21,7 +21,7 @@ const Repositories: React.FC = () => {
         value={searchInput}
       />
       <h2>Results</h2>
-      <SearchResults />
+      <SearchResults isError={!!error} isLoading={loading} items={items} />
     </>
   );
 };
