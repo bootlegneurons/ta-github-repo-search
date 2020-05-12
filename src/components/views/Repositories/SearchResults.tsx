@@ -25,9 +25,8 @@ const SearchResults: React.FC<SearchResultsProps> = ({ isError, isLoading, items
     <ul className={styles.wrapper}>
       {items.map(({ id, name, watchers, stargazers }) => (
         <li key={id}>
-          <h3>
-            {name} <span>({id})</span>
-          </h3>
+          <h3>{name}</h3>
+          <h4>{id}</h4>
           <p>
             {watchers.totalCount} watchers - {stargazers.totalCount} stars
           </p>
