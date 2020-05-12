@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import SearchInput from './SearchInput';
 import SearchResults from './SearchResults';
+import useRepositories from './useRepositories';
 
 const Repositories: React.FC = () => {
-  const [searchInput, setSearchInput] = useState<string>('');
+  const { search: queryString } = useLocation();
+  const queryParams = new URLSearchParams(queryString);
+  const search = queryParams.get('q') || '';
+  const [searchInput, setSearchInput] = useState<string>(search);
+
+  const { items, error, loading } = useRepositories({ search });
 
   return (
     <>
