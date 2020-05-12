@@ -21,17 +21,13 @@
   },
   "rules": {
     "import/order": ["error", {
-      "alphabetize": {
-        "caseInsensitive": true,
-        "order": "asc"
-      },
-      "groups": ["external", "internal"],
-      "newlines-between": "always"
+      "groups": ["external", ["parent", "sibling"], "internal"],
+      "newlines-between": "ignore"
       }
     ],
     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
-    "react/jsx-max-props-per-line": ["error", { "maximum": 3 }],
-    "react/jsx-sort-props": ["error", { "ignoreCase": true }]
+    "react/jsx-sort-props": ["error", { "ignoreCase": true }],
+    "react/prop-types": [0]
   },
   "settings": {
     "react": {
