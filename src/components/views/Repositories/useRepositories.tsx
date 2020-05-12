@@ -56,8 +56,9 @@ const useRepositories = ({ search }: UseRepositoriesInput): UseRepositories => {
   const [error, setError] = useState<ApolloError | null>(null);
 
   useEffect(() => {
-    // Do not fetch if no search term is provided
+    // Do not fetch, and clear items, if no search term is provided
     if (search === '') {
+      setItems([]);
       return;
     }
 
