@@ -21,9 +21,12 @@ See [this guide](https://help.github.com/en/github/authenticating-to-github/crea
 npm run start
 ```
 
-## Issues
+## Changelog
 
-Repositories are not currently being filtered by name, even with the directive `in:name` within the search query. My syntax seems to be correct according to official documentation. I suspect that the directive is being entirely ignored, I would need more time to troubleshoot this issue. The same behaviour can be seen in [GitHub's API Explorer](https://developer.github.com/v4/explorer) which leads me to think it may be a limitation of the v4 API.
+### Update: 24-05-2020
+
+* Bugfix: Repositories now correctly filtered by name
+* Feature: Basic pagination for repository results
 
 ## Design choices
 

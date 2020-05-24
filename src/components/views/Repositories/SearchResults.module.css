@@ -1,7 +1,7 @@
-.wrapper {
+.wrapper ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px 0px 8px 0px;
+  padding: 0px;
 }
 
 .wrapper li {
@@ -22,6 +22,13 @@
   font-weight: normal;
   color: #aaaaaa;
   font-size: 0.8em;
-  margin: 0 0 8px 0;
+  margin: 0px 0px 8px 0px;
   text-overflow: ellipsis;
+}
+
+.wrapper button {
+  padding: 8px 16px;
+  font-size: 1em;
+  color: #fcfcfc;
+  background: #333333;
 }

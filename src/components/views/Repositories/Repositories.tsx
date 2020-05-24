@@ -10,7 +10,7 @@ const Repositories: React.FC = () => {
   const search = queryParams.get('q') || '';
   const [searchInput, setSearchInput] = useState<string>(search);
 
-  const { items, error, loading } = useRepositories({ search });
+  const { items, error, loading, hasMore, fetchMore } = useRepositories({ search });
 
   return (
     <>
@@ -21,7 +21,13 @@ const Repositories: React.FC = () => {
         value={searchInput}
       />
       <h2>Results</h2>
-      <SearchResults isError={!!error} isLoading={loading} items={items} />
+      <SearchResults
+        fetchMore={fetchMore}
+        hasMore={hasMore}
+        isError={!!error}
+        isLoading={loading}
+        items={items}
+      />
     </>
   );
 };
