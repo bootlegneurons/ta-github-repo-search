@@ -90,7 +90,7 @@ const useRepositories = ({ search }: UseRepositoriesInput): UseRepositories => {
   const [error, setError] = useState<ApolloError | null>(null);
   const [hasMore, setHasMore] = useState<boolean>(false);
   const [cursor, setCursor] = useState<string | null>(null);
-  const [shouldFetch, setShouldFetch] = useState<boolean>(true);
+  const [shouldFetch, setShouldFetch] = useState<boolean>(false);
 
   // When performing query, concat results to existing items and update pagination vars
   const fetchMore = useCallback(() => {
